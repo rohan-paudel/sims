@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>SearchStudentResult</title>
+  <link rel="stylesheet" href="/assets/css/result.css">
+</head>
+
+<body>
+
+
+<div class="studentData">
+    <form action="" id="form1">
+        <input type="string" placeholder="Roll No" id="rollNoStudent" pattern="KAT.*" required class="align-input">
+
+
+        <!-- <input type="text" placeholder="Name of student" id="nameStudent" required>  -->
+        <button type="submit" id="button_search_student" >Search</button></a><br>
+        
+    </form>
+  </div>
+        <button type="submit" id="button_Add_Result" onclick="window.location.href='addResult.html'">Add Result</button></a><br>
+
+<center>
+    <iframe src="./TableResultStudent.html" title="description" id="framee" frameborder="0" ></iframe>
+
+</center>
+<script>
+  
+  const framee = document.getElementById("framee");
+  framee.onload = function(){
+    if(framee.contentWindow.document.body.scrollHeight < window.innerHeight){
+      framee.style.height= '100vh';
+    } else {
+      framee.style.height = framee.contentWindow.document.body.scrollHeight+100 + 'px';
+    }
+    
+
+}
+</script>
+</body>
+
+</html>
